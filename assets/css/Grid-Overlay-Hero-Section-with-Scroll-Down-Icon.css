@@ -1,0 +1,95 @@
+#hero {
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+#hero .black-overlay {
+  background-color: black;
+  opacity: 0.8;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#hero .black-overlay::before {
+  position: absolute;
+  content: ' ';
+  background-image: linear-gradient(45deg,#444 25%,transparent 0),linear-gradient(225deg,#444 25%,transparent 0);
+  background-size: 2px 2px;
+  background-position: -3px -3px,0 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+#hero-bg {
+  width: 100%;
+  height: 100%;
+  background-image: url(bg-image.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+}
+
+#slogan {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  color: white;
+  z-index: 2;
+}
+
+#slogan p {
+  font-size: 28px;
+  min-width: 340px;
+  margin: auto;
+}
+
+@media (min-width: 768px) {
+  #slogan p {
+    font-size: 32px;
+    min-width: 400px;
+    margin: auto;
+  }
+}
+
+.hero-btn {
+  max-width: 220px;
+  margin: auto;
+}
+
+@media (min-width: 768px) {
+  .hero-btn {
+    max-width: 280px;
+    margin: auto;
+  }
+}
+
+.hero-btn a {
+  box-shadow: 0 10px 20px 0 rgba(0,0,0,0.5);
+  font-size: 18px;
+}
+
+@media (min-width: 992px) {
+  .hero-btn a {
+    box-shadow: 0 10px 20px 0 rgba(0,0,0,0.5);
+    font-size: 21px;
+  }
+}
+
+#continue {
+  text-decoration: none;
+  position: absolute;
+  bottom: 40px;
+  right: 50%;
+  transform: translateX(17px);
+  color: white;
+  font-size: 36px;
+}
+
